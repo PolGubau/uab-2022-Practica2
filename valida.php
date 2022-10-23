@@ -1,7 +1,6 @@
 <?php
 require_once './model/config.php';
 require_once './model/database.php';
-$db = 'annacamps_cv';
 
 $userInput = (isset($_POST['user'])) ? $_POST['user'] : "";
 $password = (isset($_POST['password'])) ? $_POST['password'] : "";
