@@ -1,7 +1,7 @@
 <?php
 //calling the database connection
 require_once './model/config.php';
-require_once 'database.php';
+require_once './model/database.php';
 require_once 'index.php';
 
 session_start();
