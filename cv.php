@@ -46,7 +46,7 @@ if (!isset($_SESSION['user'])) {
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/cv.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pràctica 2</title>
+    <title>Curriculum de <?php echo $nom  ?></title>
 
 
 

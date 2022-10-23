@@ -37,8 +37,8 @@ if (!$result) {
 }
 
 $to = $email;
-$subject = "Test mail";
-$message = "Hello! This is a test email message.";
+$subject = "Bones $nom !";
+$message = "Gràcies per iniciar sessió, esperem veure't aviat :)";
 $from = "gubaupol@gmail.com";
 $headers = "From:" . $from;
 
