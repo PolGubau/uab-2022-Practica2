@@ -63,7 +63,9 @@ if (!isset($_SESSION['user'])) {
           <div class="section">
             <img class="img" src="https://api.multiavatar.com/<?php echo ($nom . ' ' . $cognoms) ?>.png">
 
-            <div class="titulo"><i class="fa-solid fa-angles-right"></i>Datos personales</div>
+            <div class="titulo"><i class="fa-solid fa-angles-right"></i>
+              <h4>Datos personales</h4>
+            </div>
             <div>
               <ul>
                 <li class="item_lista"><i class="fa-solid fa-user"></i><?php echo ($nom . ' ' . $cognoms) ?></li>
@@ -81,7 +83,9 @@ if (!isset($_SESSION['user'])) {
 
           <!-- Habilidades -->
           <div class="section">
-            <div class="titulo"><i class="fa-solid fa-angles-right"></i>Habilidades</div>
+            <div class="titulo"><i class="fa-solid fa-angles-right"></i>
+              <h4>Habilidades</h4>
+            </div>
             <div>
               <div class="barraProgreso">
                 <div class="col-6">Disciplinado</div>
@@ -133,7 +137,9 @@ if (!isset($_SESSION['user'])) {
 
           <!-- idiomas -->
           <div class="section">
-            <div class="titulo"><i class="fa-solid fa-angles-right"></i>Idiomas</div>
+            <div class="titulo"><i class="fa-solid fa-angles-right"></i>
+              <h4>Idiomas</h4>
+            </div>
             <div>
               <div class="barraProgreso ">
                 <div class="col-6">Español</div>
@@ -176,7 +182,9 @@ if (!isset($_SESSION['user'])) {
 
           <!-- Informática -->
           <div class="section">
-            <div class="titulo"><i class="fa-solid fa-angles-right"></i>Informática</div>
+            <div class="titulo"><i class="fa-solid fa-angles-right"></i>
+              <h4>Informática</h4>
+            </div>
             <div>
               <div class="barraProgreso ">
                 <div class="col-6">Microsoft Excel</div>
@@ -230,7 +238,10 @@ if (!isset($_SESSION['user'])) {
 
           <!-- Competencias -->
           <div class="section">
-            <div class="titulo"><i class="fa-solid fa-angles-right"></i>Competencias</div>
+            <div class="titulo"><i class="fa-solid fa-angles-right"></i>
+              <h4>Competencias
+              </h4>
+            </div>
             <div>
               <div>
 
@@ -247,14 +258,19 @@ if (!isset($_SESSION['user'])) {
           <div class="section">
             <!-- Columna derecha -->
             <div>
-              <div class="titulo"><i class="fa-solid fa-angles-right"></i>Perfil</div>
+              <div class="titulo"><i class="fa-solid fa-angles-right"></i>
+                <h4>Perfil
+                </h4>
+              </div>
               <div>
                 <ul>
                   <p>Experiencia en diferentes proyectos de implementación y mantenimiento post implementación, como así
                     también tareas de mantenimiento correctivo y evolutivo. Proactivo, orientado a resultados, con 4 años de
                     experiencia en áreas administrativo-contables, y más de 4 años de experiencia como consultor.</p>
                   <div>
-                    <div class="titulo"><i class="fa-solid fa-angles-right"></i>Experiencia de trabajo</div>
+                    <div class="titulo"><i class="fa-solid fa-angles-right"></i>
+                      <h4>Experiencia de trabajo</h4>
+                    </div>
                     <div>
 
                       <div>
