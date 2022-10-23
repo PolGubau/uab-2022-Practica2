@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/form.css">
 
 
@@ -39,20 +40,20 @@
         } ?>
         <form action="valida.php" method="POST" class="formulari">
             <div class="inputContainer">
-                <label for="user">Nom d'usuari</label> <input type="text" class="input" name="user">
+                <label for="user">Nom d'usuari</label> <input type="text" class="input" name="user" maxlength="50">
             </div>
             <div class="inputContainer">
 
                 <label for="password">Contrasenya</label>
-                <input type="password" class="input" name="password" maxlength="50">
+                <input type="password" class="input" name="password" maxlength="8">
             </div>
 
 
-            <input type="submit" class="botoEnviar" value="Envia" maxlength="50">
+            <input type="submit" class="botoEnviar" value="Envia">
 
 
         </form>
-        <a href="registre.php" class="botoRegistre">No tens compte? Registra't</a>
+        <a href="./registre.php" class="botoRegistre">No tens compte? Registra't</a>
 </body>
 
 </html>

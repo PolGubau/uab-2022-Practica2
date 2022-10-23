@@ -5,74 +5,8 @@ session_start();
 if (!isset($_SESSION['user'])) {
 
 ?>
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-    }
+  <link rel="stylesheet" href="styles/loader.css">
 
-    .container {
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-      display: grid;
-      place-items: center;
-    }
-
-    .text {
-      font-size: 2rem;
-      font-weight: 600;
-      color: #000;
-      border-radius: 20px;
-      background-color: #dadada;
-      font-family: Arial, Helvetica, sans-serif;
-      padding: 20px 30px;
-
-    }
-
-    .ring {
-      position: absolute;
-      top: 30%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 150px;
-      height: 150px;
-      background: transparent;
-      border: 1px solid #dadada;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 150px;
-      font-family: sans-serif;
-      font-size: 20px;
-      color: #000;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-    }
-
-    .ring:before {
-      content: '';
-      position: absolute;
-      top: -3px;
-      left: -3px;
-      width: 100%;
-      height: 100%;
-      border: 3px solid transparent;
-      border-top: 3px solid #000;
-      border-radius: 50%;
-      animation: animateC 2s linear infinite;
-    }
-
-
-    @keyframes animateC {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-  </style>
 
   <body>
     <div class="ring">
@@ -81,6 +15,7 @@ if (!isset($_SESSION['user'])) {
     <div class="container">
       <p class="text">
         Has d'iniciar sessió per accedir a aquesta pàgina!
+        <small>En 10 segons seràs redirigit.</small>
       </p>
     </div>
   </body>
@@ -92,6 +27,7 @@ if (!isset($_SESSION['user'])) {
   $user = $_SESSION['user'];
   $nom = $user['nom'];
   $cognoms = $user['cognoms'];
+  $email = $user['email'];
 
 
 
@@ -107,159 +43,12 @@ if (!isset($_SESSION['user'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/0787d9ec00.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/cv.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pràctica 2</title>
 
-    <!-- CSS -->
-    <style>
-      .row2 {
-        display: flex;
-      }
 
-      .col1 {
-        height: 100%;
-      }
-
-      body {
-        display: flex;
-        justify-content: center;
-
-      }
-
-      /* Datos personales, habilidades...*/
-      .titulo {
-        font-weight: bold;
-        border-bottom: 2px #dadada solid;
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-        display: flex;
-        gap: 6px;
-
-
-      }
-
-      /* Perfil, experiencia de trabajo, educación*/
-      .col2 {
-        margin-top: 15px;
-        line-height: 1.25em;
-      }
-
-      .col2 ul {
-        margin-left: -31px;
-      }
-
-      /* Imatge */
-      .img {
-        width: 170px;
-        height: 170px;
-        border-radius: 50%;
-        border: 5px solid #dadada;
-        align-self: center;
-        margin: -85px 0px 25px 40px;
-      }
-
-      /*Germán Rossi*/
-      .tituloprincipal {
-        margin-left: 200px;
-        color: white;
-      }
-
-      /*Puntitos de lista quitados*/
-
-      .col1 ul {
-        margin-left: -31px;
-      }
-
-      .item_lista {
-        display: flex;
-        gap: 7px;
-        margin-bottom: 4px;
-      }
-
-      .explicacion {
-        display: flex;
-        margin-bottom: 10px;
-
-      }
-
-      /*Iconos*/
-      .fa-solid {
-        width: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: grey;
-      }
-
-
-
-      /*Barra de progressos*/
-      .progress-bar {
-        background-color: #dadada;
-        justify-content: center;
-        align-items: center;
-
-      }
-
-      .header {
-        background-color: #dadada;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        height: 120px;
-      }
-
-      .barraProgreso {
-        display: flex;
-        margin-bottom: 4px;
-        align-items: center;
-
-
-      }
-
-      .subtitulo {
-        color: #dadada;
-      }
-
-      .universidad {
-        color: #dadada;
-      }
-
-      .logout {
-        background-color: #dadada;
-        position: absolute;
-        top: 0;
-        text-decoration: none;
-        color: white;
-        right: 0;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0 0 0 50px;
-      }
-
-      @media only screen and (max-width: 600px) {
-
-        .row2 {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .row2>* {
-          width: 100%;
-        }
-
-        .barraProgreso {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-    </style>
 
   </head>
 
@@ -274,17 +63,17 @@ if (!isset($_SESSION['user'])) {
       <div class="row2 d-flex">
         <div class="col col-5 col1">
           <!-- Columna izquierda -->
-          <img class="img" src="https://cdn.smehost.net/sonymusiccommx-mxprod/wp-content/uploads/2020/10/Harry_Styles.jpg">
+          <img class="img" src="https://api.multiavatar.com/<?php echo ($nom . ' ' . $cognoms) ?>.png">
 
           <!-- Datos personales -->
           <div>
             <div class="titulo"><i class="fa-solid fa-angles-right"></i>Datos personales</div>
             <div>
               <ul>
-                <li class="item_lista"><i class="fa-solid fa-user"></i>Germán Rossi</li>
+                <li class="item_lista"><i class="fa-solid fa-user"></i><?php echo ($nom . ' ' . $cognoms) ?></li>
                 <li class="item_lista"><i class="fa-solid fa-house"></i>Calle 24 5532, City Bell, La Plata</li>
                 <li class="item_lista"><i class="fa-solid fa-phone"></i>1234 5678</li>
-                <li class="item_lista"><i class="fa-solid fa-at"></i>germanrossi@gmail.com</li>
+                <li class="item_lista"><i class="fa-solid fa-at"></i><?php echo ($email) ?></li>
                 <li class="item_lista"><i class="fa-solid fa-calendar"></i>04/01/1995</li>
                 <li class="item_lista"><i class="fa-solid fa-flag"></i>Argentina</li>
                 <li class="item_lista"><i class="fa-solid fa-mobile"></i>9376 5432</li>

@@ -1,7 +1,7 @@
 <?php
 
 // env | prod
-$env = 'dev';
+$env = 'prod';
 
 $host = 'localhost';
 $db = 'cv';
@@ -9,10 +9,10 @@ $user = 'root';
 $password = '';
 
 if ($env === 'prod') {
-    $host = 'mysql-annacamps.alwaysdata.net';
-    $db = 'annacamps_cv';
-    $user = 'annacamps_aina';
-    $password = 'ainaainaaina123';
+    $host = 'mysql-pol.alwaysdata.net';
+    $db = 'pol_cv';
+    $user = 'pol_web_access';
+    $password = 'passwordfromweb';
 }
 
 try {
