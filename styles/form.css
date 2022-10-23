@@ -1,0 +1,100 @@
+ body {
+     font-family: 'Poppins', Arial, Helvetica, sans-serif;
+     background-color: #dadada;
+     display: grid;
+     place-items: center;
+     height: 90vh;
+
+ }
+
+
+
+ h1 {
+     font-size: 2em;
+     margin: 0;
+ }
+
+ button,
+ input {
+     outline: none;
+     border: 1px;
+ }
+
+ .container {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     width: 80%;
+     max-width: 600px;
+     background-color: white;
+     border-radius: 20px;
+     padding: 50px;
+     align-items: center;
+     justify-content: center;
+     align-content: center;
+     flex-wrap: wrap;
+ }
+
+ .formulari {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     align-content: center;
+     width: 80%;
+ }
+
+ .errorMessage {
+     position: absolute;
+     top: -40px;
+     border: 10px solid white;
+     padding: 10px 15px;
+     background-color: #ffaaaa;
+     border-radius: 20px;
+     width: fit-content;
+ }
+
+
+ .inputContainer {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     width: 100%;
+ }
+
+ .input {
+     border: 1px solid grey;
+     border-radius: 10px;
+     padding: 10px;
+     width: 94%;
+     margin-bottom: 10px;
+
+ }
+
+ .footer {
+     margin-top: 20px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .botoEnviar {
+     background-color: #aaffaa;
+     border-radius: 10px;
+     padding: 10px 15px;
+     cursor: pointer;
+     width: fit-content;
+     width: 80%;
+     border: 1px solid grey;
+
+ }
+
+ .botoRegistre {
+     position: absolute;
+     bottom: -20px;
+     background-color: #dadada;
+     border: 5px solid white;
+     text-decoration: none;
+     color: black;
+     padding: 5px 15px;
+     border-radius: 10px;
+ }
