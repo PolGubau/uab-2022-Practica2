@@ -68,11 +68,11 @@ if (!isset($_SESSION['user'])) {
               <ul>
                 <li class="item_lista"><i class="fa-solid fa-user"></i><?php echo ($nom . ' ' . $cognoms) ?></li>
                 <li class="item_lista"><i class="fa-solid fa-house"></i>Calle 24 5532, City Bell, La Plata</li>
-                <li class="item_lista"><i class="fa-solid fa-phone"></i>1234 5678</li>
+                <li class="item_lista"><i class="fa-solid fa-phone"></i><?php echo '(+34) 6' . generateTelephone() ?></li>
                 <li class="item_lista"><i class="fa-solid fa-at"></i><?php echo ($email) ?></li>
-                <li class="item_lista"><i class="fa-solid fa-calendar"></i>04/01/1995</li>
-                <li class="item_lista"><i class="fa-solid fa-flag"></i>Argentina</li>
-                <li class="item_lista"><i class="fa-solid fa-mobile"></i>9376 5432</li>
+                <li class="item_lista"><i class="fa-solid fa-calendar"></i><?php echo generateDate() ?></li>
+                <li class="item_lista"><i class="fa-solid fa-flag"></i><?php echo generateCountry() ?></li>
+                <li class="item_lista"><i class="fa-solid fa-mobile"></i><?php echo generateTelephone() ?></li>
                 <li class="item_lista"><i class="fa-solid fa-heart"></i>Soltero</li>
                 <li class="item_lista"><i class="fa-solid fa-car"></i>Clase C</li>
               </ul>
