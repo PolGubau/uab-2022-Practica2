@@ -17,34 +17,34 @@
   <section class="container">
     <h1>CV Creator 📚</h1>
     <h3>Crea un compte</h3>
+
+    <?php
+    if (isset($_GET['error'])) {
+      echo '        <p class="errorMessage">';
+      switch ($_GET['error']) {
+        case 'emailAlreadyExists':
+          echo "Aquest email ja està registrat";
+          break;
+        case 'alreadyExists':
+          echo " Aquest usuari ja està registrat";
+          break;
+        case 'wrongPassword':
+          echo " Aquest contraseña no és correcta";
+          break;
+        case 'unfilled':
+          echo "S'han d'omplir tots els camps!";
+          break;
+        case 'problemCreatingUser':
+          echo "Hi ha hagut un problema creant el teu usuari";
+          break;
+
+        default:
+          echo 'Oupssss el programador ha oblidat alguna cosa...';
+          break;
+      }
+      echo '</p>';
+    } ?>
     <form action="alta.php" method="post" class="formulari">
-
-
-
-
-      <?php
-      if (isset($_GET['error'])) {
-        echo '        <p class="errorMessage">';
-        switch ($_GET['error']) {
-          case 'emailAlreadyExists':
-            echo "Aquest email ja està registrat";
-            break;
-          case 'alreadyExists':
-            echo " Aquest usuari ja està registrat";
-            break;
-          case 'wrongPassword':
-            echo " Aquest contraseña no és correcta";
-            break;
-          case 'problemCreatingUser':
-            echo "Hi ha hagut un problema creant el teu usuari";
-            break;
-
-          default:
-            echo 'Oupssss el programador ha oblidat alguna cosa...';
-            break;
-        }
-        echo '</p>';
-      } ?>
 
       <div class="inputContainer">
         <label for='nom'>Nom:</label>
