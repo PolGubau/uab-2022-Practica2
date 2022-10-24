@@ -21,19 +21,29 @@
 
 
 
+
       <?php
-
-
       if (isset($_GET['error'])) {
-        if ($_GET['error'] === 'emailAlreadyExists') {
-          echo "Aquest email ja està registrat";
-        } else if ($_GET['error'] === 'alreadyExists') {
-          echo "Aquest usuari ja està registrat";
-        } else if ($_GET['error'] === 'problemCreatingUser') {
-          echo 'Hi ha hagut un problema creant el teu usuari';
-        } else {
-          echo 'Oupssss el programador ha oblidat alguna cosa...';
+        echo '        <p class="errorMessage">';
+        switch ($_GET['error']) {
+          case 'emailAlreadyExists':
+            echo "Aquest email ja està registrat";
+            break;
+          case 'alreadyExists':
+            echo " Aquest usuari ja està registrat";
+            break;
+          case 'wrongPassword':
+            echo " Aquest contraseña no és correcta";
+            break;
+          case 'problemCreatingUser':
+            echo "Hi ha hagut un problema creant el teu usuari";
+            break;
+
+          default:
+            echo 'Oupssss el programador ha oblidat alguna cosa...';
+            break;
         }
+        echo '</p>';
       } ?>
 
       <div class="inputContainer">
