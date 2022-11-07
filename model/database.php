@@ -19,7 +19,7 @@ function aconsegueixUsuaris($conn)
 //Es busca un usuari i ho retorna.
 function seleccionaUsuari($conn, $user)
 {
-    $query = "SELECT * FROM usuaris WHERE user = '$user'";
+    $query = "SELECT * FROM usuaris WHERE userName = '$user'";
     $result = $conn->query($query);
     return $result->fetch();
 }
@@ -27,7 +27,7 @@ function seleccionaUsuari($conn, $user)
 function insertemUsuari($conn, $user, $password, $nom, $cognoms, $email)
 {
     $passwordHashed = hashPassword($password);
-    $query = "INSERT INTO usuaris (user, password, nom, cognoms, email) VALUES ('$user', '$passwordHashed', '$nom', '$cognoms', '$email')";
+    $query = "INSERT INTO usuaris (userName, password, nom, cognoms, email) VALUES ('$user', '$passwordHashed', '$nom', '$cognoms', '$email')";
     $result = $conn->query($query);
     if ($result) {
         return seleccionaUsuari($conn, $user);

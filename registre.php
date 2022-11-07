@@ -29,7 +29,7 @@
           echo " Aquest usuari ja està registrat";
           break;
         case 'wrongPassword':
-          echo " Aquest contraseña no és correcta";
+          echo " Aquesta contrasenya no és correcta";
           break;
         case 'unfilled':
           echo "S'han d'omplir tots els camps!";
